@@ -40,3 +40,27 @@ const string &Animal::getKingdom() {
 const string &Animal::getSpecies() const {
     return species;
 }
+
+Gender Animal::getGender() const {
+    return gender;
+}
+
+void Animal::setGender(Gender gender) {
+    Animal::gender = gender;
+}
+
+float Animal::getWeight() const {
+    return weight;
+}
+
+void Animal::setWeight(float weight) {
+    Animal::weight = weight;
+}
+
+void Animal::printInfo() {
+
+}
+
+bool Animal::isValid() {
+    return false;
+}
