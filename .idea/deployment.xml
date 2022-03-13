@@ -5,8 +5,11 @@
       <paths name="Wiliki (8c9979a0-b51b-4c51-9cc6-af9e58ff6068)">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/ee205-lab08c-all-creatures-great-and-small" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.7ZIGRKKRfo" local="$PROJECT_DIR$" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>
