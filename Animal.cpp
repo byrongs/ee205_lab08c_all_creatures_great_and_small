@@ -17,22 +17,25 @@ using namespace std;
 const string Animal::kingdom = "Animalia" ;
 
 Animal::Animal(const string &newSpecies) : species(newSpecies) {
-    Animal::species = newSpecies;
+    setSpecies( newSpecies);
 }
 
 
-Animal::Animal(const string &species, Gender gender) : species(species), gender(gender) {
+Animal::Animal(const string &newSpecies, Gender gender) : gender(gender) {
+    setSpecies( newSpecies);
 
 
 }
 
-Animal::Animal(const string &species, Gender gender, float newWeight) : species(species), gender(gender) {
+Animal::Animal(const string &newSpecies, Gender gender, float newWeight) : gender(gender) {
+    setSpecies(newSpecies);
     setWeight(newWeight);
 
 }
 
 
-Animal::Animal(const string &species, float newWeight) : species(species), weight(newWeight) {
+Animal::Animal(const string &newSpecies, float newWeight) {
+    setSpecies( newSpecies );
     setWeight(newWeight );
 
 }
@@ -97,6 +100,14 @@ bool Animal::validateSpecies(const std::string newSpecies) {
         return false;
 
     return true;
+
+}
+
+void Animal::setSpecies(const std::string newSpecies) {
+    if( !validateSpecies( newSpecies))
+        throw invalid_argument( "A species cannot be empty.");
+
+    species = newSpecies;
 
 }
 

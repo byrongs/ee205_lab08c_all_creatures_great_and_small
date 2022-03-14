@@ -57,6 +57,11 @@ protected:
 
     bool validateWeight( const float newWeight );
     bool validateSpecies( const std::string newSpecies );
+
+private:
+    void setSpecies( const std::string newSpecies);
+
+
 };
 
 
