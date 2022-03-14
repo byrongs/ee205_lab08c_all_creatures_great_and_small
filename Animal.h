@@ -39,7 +39,7 @@ public:
 
     Gender getGender() const;
 
-    void setGender(Gender gender);
+    void setGender(Gender newGender);
 
     float getWeight() const;
 

@@ -54,8 +54,12 @@ Gender Animal::getGender() const {
     return gender;
 }
 
-void Animal::setGender(Gender gender) {
-    Animal::gender = gender;
+void Animal::setGender(Gender newGender) {
+    if (gender != UNKNOWN_GENDER && newGender != UNKNOWN_GENDER)
+        throw logic_error("Previous gender must be UNKNOWN_GENDER");
+
+
+        Animal::gender = newGender;
 }
 
 float Animal::getWeight() const {
