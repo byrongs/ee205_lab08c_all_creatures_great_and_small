@@ -9,7 +9,7 @@
 /// @date   13_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-
+#include <iostream>
 #include "Animal.h"
 
 using namespace std;
@@ -71,6 +71,19 @@ void Animal::printInfo() {
 }
 
 bool Animal::isValid() {
+    if( !validateWeight(weight ))
+    return false;
+
+    return true;
+}
+
+bool Animal::validateWeight(const float newWeight) {
+    if( newWeight == UNKNOWN_WEIGHT)
+    return true;
+
+    if( newWeight > 0 )
+        return true;
+    //In all other cases
     return false;
 }
 

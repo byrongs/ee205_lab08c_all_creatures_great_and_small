@@ -54,6 +54,8 @@ protected:
     std::string species; //Required field
     enum Gender gender = UNKNOWN_GENDER;
     float weight = UNKNOWN_WEIGHT ;
+
+    bool validateWeight( const float newWeight );
 };
 
 
