@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "Animal.h"
+
 int main() {
     Animal myFirstAnimal = Animal( "Felis catus" );
     myFirstAnimal.setGender( MALE );
@@ -17,5 +18,6 @@ int main() {
     myFirstAnimal.printInfo();
     return 0;
 }
+
 
 
