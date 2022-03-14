@@ -9,9 +9,10 @@
 /// @date   13_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <iostream>
 #include "Animal.h"
 
-#include "Animal.h"
+
 int main() {
     Animal myFirstAnimal = Animal( "Felis catus" );
     myFirstAnimal.setGender( MALE );
