@@ -11,6 +11,7 @@
 
 
 #include "Animal.h"
+#include<string>
 
 int main() {
     Animal myFirstAnimal = Animal( "Felis catus" );
