@@ -57,8 +57,11 @@ float Animal::getWeight() const {
     return weight;
 }
 
-void Animal::setWeight(float weight) {
-    Animal::weight = weight;
+void Animal::setWeight(float newWeight) {
+    if( !validateWeight( newWeight)) {
+        throw invalid_argument( "Weight must be < 0");
+    }
+    Animal::weight = newWeight;
 }
 
 void Animal::printInfo() {
