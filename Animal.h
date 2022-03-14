@@ -37,6 +37,18 @@ public:
 
     const std::string &getSpecies() const;
 
+    Gender getGender() const;
+
+    void setGender(Gender gender);
+
+    float getWeight() const;
+
+    void setWeight(float weight);
+
+    void printInfo();
+
+    bool isValid();
+
 protected:
     static const std::string kingdom ;
     std::string species; //Required field
