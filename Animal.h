@@ -14,52 +14,22 @@
 #include <iostream>
 #include <string>
 
+
+
 enum Gender {
     UNKNOWN_GENDER, MALE, FEMALE
 };
 
 
-const float UNKNOWN_WEIGHT = -1 ;
+const float UNKNOWN_WEIGHT = -1;
 
 class Animal {
-public:
-    Animal(const std::string &newspecies);
-
-    Animal(const std::string &species, Gender gender);
-
-    Animal(const std::string &species, Gender gender, float weight);
-
-    Animal(const std::string &species, float newWeight);
-
-    static const std::string &getKingdom();
-
-    const std::string &getSpecies() const;
-
-    Gender getGender() const;
-
-    void setGender(Gender newGender);
-
-    float getWeight() const;
-
-    void setWeight(float weight);
-
-    void printInfo();
-
-    bool isValid();
-
 protected:
     static const std::string kingdom ;
-    std::string species; // Required
+    std::string species; //Required field
     enum Gender gender = UNKNOWN_GENDER;
     float weight = UNKNOWN_WEIGHT ;
-
-    bool validateWeight( const float newWeight);
-    bool validateSpecies( const std::string newSpecies);
-
-private:
-    void setSpecies( const std::string newSpecies);
-
-
+};
 
 
 
