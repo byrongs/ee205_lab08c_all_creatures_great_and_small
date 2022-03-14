@@ -11,6 +11,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <string>
 
 enum Gender {
@@ -28,7 +29,7 @@ public:
 
     Animal(const std::string &species, Gender gender, float weight);
 
-    Animal(const std::string &species, float weight);
+    Animal(const std::string &species, float newWeight);
 
     static const std::string &getKingdom();
 
@@ -36,7 +37,7 @@ public:
 
     Gender getGender() const;
 
-    void setGender(Gender gender);
+    void setGender(Gender newGender);
 
     float getWeight() const;
 
@@ -52,8 +53,13 @@ protected:
     enum Gender gender = UNKNOWN_GENDER;
     float weight = UNKNOWN_WEIGHT ;
 
+    bool validateWeight( const float newWeight);
+    bool validateSpecies( const std::string newSpecies);
 
-};
+private:
+    void setSpecies( const std::string newSpecies);
+
+
 
 
 
