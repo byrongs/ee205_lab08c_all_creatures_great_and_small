@@ -26,12 +26,14 @@ Animal::Animal(const string &species, Gender gender) : species(species), gender(
 
 }
 
-Animal::Animal(const string &species, Gender gender, float weight) : species(species), gender(gender), weight(weight) {
+Animal::Animal(const string &species, Gender gender, float newWeight) : species(species), gender(gender) {
+    setWeight(newWeight);
 
 }
 
 
-Animal::Animal(const string &species, float weight) : species(species), weight(weight) {
+Animal::Animal(const string &species, float newWeight) : species(species), weight(newWeight) {
+    setWeight(newWeight );
 
 }
 
@@ -88,5 +90,13 @@ bool Animal::validateWeight(const float newWeight) {
         return true;
     //In all other cases
     return false;
+}
+
+bool Animal::validateSpecies(const std::string newSpecies) {
+    if( newSpecies.empty() )
+        return false;
+
+    return true;
+
 }
 

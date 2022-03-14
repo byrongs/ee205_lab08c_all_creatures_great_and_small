@@ -29,9 +29,9 @@ public:
 
     Animal(const std::string &species, Gender gender);
 
-    Animal(const std::string &species, Gender gender, float weight);
+    Animal(const std::string &species, Gender gender, float newWeight);
 
-    Animal(const std::string &species, float weight);
+    Animal(const std::string &species, float newWeight);
 
     static const std::string &getKingdom();
 
@@ -56,6 +56,7 @@ protected:
     float weight = UNKNOWN_WEIGHT ;
 
     bool validateWeight( const float newWeight );
+    bool validateSpecies( const std::string newSpecies );
 };
 
 
