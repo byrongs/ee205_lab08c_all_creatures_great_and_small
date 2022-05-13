@@ -18,6 +18,11 @@ int main() {
     myFirstAnimal.setGender( MALE );
     myFirstAnimal.setWeight( 19 ); // @todo Refactor to include Unit of Measure
     myFirstAnimal.printInfo();
+
+    Animal mySecondAnimal = Animal("Canis lupus familiaris");
+    mySecondAnimal.setGender( FEMALE);
+    mySecondAnimal.setWeight( 20);
+    mySecondAnimal.printInfo();
     return 0;
 }
 
